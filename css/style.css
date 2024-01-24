@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto Mono", sans-serif;
+  background-color: #1c1c1c;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  height: 3.375rem;
+  line-height: 3.375rem;
+  margin-bottom: 1rem;
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.player-turn {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+
+.player-x,
+.player-o {
+  font-family: "Roboto", sans-serif;
+}
+
+.player-x {
+  color: #09c372;
+}
+
+.player-o {
+  color: #498afb;
+}
+
+.restart-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 1.1em;
+  font-family: "Roboto Mono", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  justify-content: center;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  font-size: 3em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.option.winning-position {
+  background-color: #444;
+}
+
+.border-left {
+  border-left: 4px solid #ffffff;
+}
+
+.border-right {
+  border-right: 4px solid #ffffff;
+}
+
+.border-top {
+  border-top: 4px solid #ffffff;
+}
+
+@font-face {
+  font-family: "Code Saver";
+  src: url("../fonts/Code-Saver-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Code Saver";
+  src: url("../fonts/Code-Saver-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 0.875em;
+  font-family: "Code Saver";
+  color: #ffffff;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  margin-left: 0.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  h1 {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+}
