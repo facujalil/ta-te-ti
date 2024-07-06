@@ -1,11 +1,11 @@
-let option = document.querySelectorAll(".option");
-let optionArray = Array.from(option);
+const option = document.querySelectorAll(".option");
+const optionArray = Array.from(option);
 
-let title = document.querySelector("h1");
+const title = document.querySelector("h1");
 
-let restartButton = document.querySelector(".restart-button");
+const restartButton = document.querySelector(".restart-button");
 
-let playerTurn = document.querySelector(".player-turn");
+const playerTurn = document.querySelector(".player-turn");
 
 let gameState = true;
 
