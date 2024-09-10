@@ -1,5 +1,5 @@
-const option = document.querySelectorAll(".option");
-const optionArray = Array.from(option);
+const options = document.querySelectorAll(".option");
+const optionsArray = Array.from(options);
 
 const title = document.querySelector("h1");
 
@@ -15,7 +15,7 @@ let firstTurn;
 
 let firstTurnControl = 0;
 
-option.forEach((element) => {
+options.forEach((element) => {
   element.addEventListener("click", () => {
     if (gameState) {
       if (element.textContent !== "") {
@@ -49,7 +49,7 @@ option.forEach((element) => {
 });
 
 const calculateResult = () => {
-  const board = optionArray.map((option) => option.textContent);
+  const board = optionsArray.map((option) => option.textContent);
 
   for (let i = 0; i < 9; i += 3) {
     if (board[i] && board[i] === board[i + 1] && board[i] === board[i + 2]) {
@@ -84,7 +84,7 @@ const calculateResult = () => {
 
 const markMove = (move) => {
   move.forEach((position) => {
-    option[position].classList.add("winning-position");
+    options[position].classList.add("winning-position");
   });
   gameState = false;
 };
@@ -108,7 +108,7 @@ const announceWinner = (winner) => {
 };
 
 const disableOptions = () => {
-  option.forEach((element) => {
+  options.forEach((element) => {
     element.style.cursor = "default";
   });
 };
@@ -119,7 +119,7 @@ const restartGame = () => {
   restartButton.style.display = "none";
   playerTurn.style.display = "block";
 
-  option.forEach((element) => {
+  options.forEach((element) => {
     element.textContent = "";
     element.classList.remove("player-x");
     element.classList.remove("player-o");
